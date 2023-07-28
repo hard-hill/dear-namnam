@@ -7,56 +7,24 @@ body {
   height: 100%;
   font-family: 'tradegothiclt-bold', sans-serif;
   display: flex; /* تحويل عنصر الـ body إلى flex container */
-  justify-content: center; /* محاذاة العناصر أفقياً بالوسط */
-  align-items: center; /* محاذاة العناصر عمودياً بالوسط */
+  justify-content: flex-end; /* محاذاة العناصر أفقياً إلى اليمين */
+  align-items: flex-start; /* محاذاة العناصر عمودياً إلى الأعلى */
 }
 h1 {
-  font-size: 5em;
+  font-size: 6em; /* حجم الخط */
   color: white;
   text-transform: uppercase;
   text-align: center; /* محاذاة النص في الوسط أفقياً */
-}
-
-span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
+  margin: 0; /* إزالة الهوامش لعنصر h1 لتحسين المظهر */
+  position: absolute; /* تحديد موضع العنصر بالنسبة للصفحة */
+  top: 50%; /* تحديد البُعد العلوي من الصفحة بالنسبة للعنصر نصف العلوي */
+  left: 50%; /* تحديد البُعد اليميني من الصفحة بالنسبة للعنصر نصف اليساري */
+  transform: translate(-50%, -50%); /* وضع النص في الوسط عمودياً وأفقياً */
 }
 </style>
 </head>
 <body>
-    <h1>Hello<br>04/08/2009</h1>
-    <script>document.addEventListener('DOMContentLoaded',function(event){
-      var dataText = [ "Happy Birthday"];
-            function typeWriter(text, i, fnCallback) {
-        if (i < (text.length)) {
-         document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
-              setTimeout(function() {
-            typeWriter(text, i + 1, fnCallback)
-          }, 100);
-        }
-        else if (typeof fnCallback == 'function') {
-          setTimeout(fnCallback, 10);
-        }
-      }
-       function StartTextAnimation(i) {
-         if (typeof dataText[i] == 'undefined'){
-            setTimeout(function() {
-              StartTextAnimation(0);
-            }, 500);
-         }
-        if (i < dataText[i].length) {
-         typeWriter(dataText[i], 0, function(){
-           StartTextAnimation(i + 1);
-         });
-        }
-      }
-      StartTextAnimation(0);
-    });
-    </script>
+    <h1>Happy Birthday</h1>
+    <div style="position: absolute; top: 0; right: 0; margin: 30px; font-size: 2em; color: white;">19/08/2008</div>
 </body>
 </html>
