@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: #8a2be2; /* اللون البنفسجي */
-  height: 100%;
-  font-family: 'tradegothiclt-bold', sans-serif;
-  display: flex; /* تحويل عنصر الـ body إلى flex container */
-  justify-content: flex-end; /* محاذاة العناصر أفقياً إلى اليمين */
-  align-items: flex-start; /* محاذاة العناصر عمودياً إلى الأعلى */
-}
-h1 {
-  font-size: 6em; /* حجم الخط */
-  color: white;
-  text-transform: uppercase;
-  text-align: center; /* محاذاة النص في الوسط أفقياً */
-  margin: 0; /* إزالة الهوامش لعنصر h1 لتحسين المظهر */
-  position: absolute; /* تحديد موضع العنصر بالنسبة للصفحة */
-  top: 50%; /* تحديد البُعد العلوي من الصفحة بالنسبة للعنصر نصف العلوي */
-  left: 50%; /* تحديد البُعد اليميني من الصفحة بالنسبة للعنصر نصف اليساري */
-  transform: translate(-50%, -50%); /* وضع النص في الوسط عمودياً وأفقياً */
-}
-</style>
+    <title>كتابة كلمة في وسط الشاشة وبحجم كبير</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .centered-text {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Happy Birthday</h1>
-    <div style="position: absolute; top: 0; right: 0; margin: 30px; font-size: 2em; color: white;">19/08/2008</div>
+    <div class="centered-text">
+        انس
+    </div>
 </body>
 </html>
